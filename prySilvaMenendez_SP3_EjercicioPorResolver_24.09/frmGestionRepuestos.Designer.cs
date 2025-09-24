@@ -34,11 +34,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // mrcDatos
             // 
+            this.mrcDatos.Controls.Add(this.textBox2);
+            this.mrcDatos.Controls.Add(this.textBox1);
+            this.mrcDatos.Controls.Add(this.richTextBox1);
+            this.mrcDatos.Controls.Add(this.listBox2);
+            this.mrcDatos.Controls.Add(this.listBox1);
             this.mrcDatos.Controls.Add(this.label5);
             this.mrcDatos.Controls.Add(this.label4);
             this.mrcDatos.Controls.Add(this.label3);
@@ -90,11 +100,49 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(337, 28);
+            this.label5.Location = new System.Drawing.Point(359, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "label5";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(114, 32);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 17);
+            this.listBox1.TabIndex = 5;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(114, 78);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(120, 17);
+            this.listBox2.TabIndex = 6;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(285, 75);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(179, 127);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(114, 126);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(120, 20);
+            this.textBox1.TabIndex = 8;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(114, 182);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(120, 20);
+            this.textBox2.TabIndex = 9;
             // 
             // frmGestionRepuestos
             // 
@@ -119,6 +167,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

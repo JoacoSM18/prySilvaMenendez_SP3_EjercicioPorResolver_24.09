@@ -32,7 +32,6 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
@@ -41,16 +40,18 @@
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblIngresar = new System.Windows.Forms.Label();
             this.lstMarcas = new System.Windows.Forms.ComboBox();
+            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.mrcDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // mrcDatos
             // 
+            this.mrcDatos.Controls.Add(this.txtCantidad);
             this.mrcDatos.Controls.Add(this.lstMarcas);
             this.mrcDatos.Controls.Add(this.radioButton2);
             this.mrcDatos.Controls.Add(this.radioButton1);
             this.mrcDatos.Controls.Add(this.txtPrecio);
-            this.mrcDatos.Controls.Add(this.txtCantidad);
             this.mrcDatos.Controls.Add(this.txtDescripcion);
             this.mrcDatos.Controls.Add(this.lblDescripcion);
             this.mrcDatos.Controls.Add(this.lblPrecio);
@@ -93,16 +94,10 @@
             this.txtPrecio.Size = new System.Drawing.Size(120, 20);
             this.txtPrecio.TabIndex = 9;
             // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(114, 142);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(120, 20);
-            this.txtCantidad.TabIndex = 8;
-            // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(285, 62);
+            this.txtDescripcion.MaxLength = 50;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(179, 140);
             this.txtDescripcion.TabIndex = 7;
@@ -178,6 +173,20 @@
             this.lstMarcas.TabIndex = 12;
             this.lstMarcas.SelectedIndexChanged += new System.EventHandler(this.lstMarcas_SelectedIndexChanged);
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(114, 142);
+            this.txtCantidad.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.ReadOnly = true;
+            this.txtCantidad.Size = new System.Drawing.Size(67, 20);
+            this.txtCantidad.TabIndex = 2;
+            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmGestionRepuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +199,7 @@
             this.Text = "Gestion de Repuestos";
             this.mrcDatos.ResumeLayout(false);
             this.mrcDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,12 +214,12 @@
         private System.Windows.Forms.Label lblOrigen;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label lblIngresar;
         private System.Windows.Forms.ComboBox lstMarcas;
+        private System.Windows.Forms.NumericUpDown txtCantidad;
     }
 }
 

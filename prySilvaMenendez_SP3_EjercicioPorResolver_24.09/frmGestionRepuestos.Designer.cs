@@ -71,7 +71,7 @@
             this.radioButton2.Location = new System.Drawing.Point(114, 104);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(72, 17);
-            this.radioButton2.TabIndex = 11;
+            this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Importado";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@
             this.radioButton1.Location = new System.Drawing.Point(114, 72);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(67, 17);
-            this.radioButton1.TabIndex = 10;
+            this.radioButton1.TabIndex = 1;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Nacional";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(114, 182);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(120, 20);
-            this.txtPrecio.TabIndex = 9;
+            this.txtPrecio.TabIndex = 4;
             // 
             // txtDescripcion
             // 
@@ -100,7 +100,7 @@
             this.txtDescripcion.MaxLength = 50;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(179, 140);
-            this.txtDescripcion.TabIndex = 7;
+            this.txtDescripcion.TabIndex = 5;
             this.txtDescripcion.Text = "";
             // 
             // lblDescripcion
@@ -170,7 +170,7 @@
             this.lstMarcas.Location = new System.Drawing.Point(114, 36);
             this.lstMarcas.Name = "lstMarcas";
             this.lstMarcas.Size = new System.Drawing.Size(132, 21);
-            this.lstMarcas.TabIndex = 12;
+            this.lstMarcas.TabIndex = 0;
             this.lstMarcas.SelectedIndexChanged += new System.EventHandler(this.lstMarcas_SelectedIndexChanged);
             // 
             // txtCantidad
@@ -184,7 +184,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.ReadOnly = true;
             this.txtCantidad.Size = new System.Drawing.Size(67, 20);
-            this.txtCantidad.TabIndex = 2;
+            this.txtCantidad.TabIndex = 3;
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmGestionRepuestos

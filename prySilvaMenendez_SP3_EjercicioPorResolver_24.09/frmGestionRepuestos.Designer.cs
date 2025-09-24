@@ -40,6 +40,7 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.lblIngresar = new System.Windows.Forms.Label();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,17 +57,17 @@
             this.mrcDatos.Controls.Add(this.lblCantidad);
             this.mrcDatos.Controls.Add(this.lblOrigen);
             this.mrcDatos.Controls.Add(this.lblMarca);
-            this.mrcDatos.Location = new System.Drawing.Point(50, 43);
+            this.mrcDatos.Location = new System.Drawing.Point(50, 68);
             this.mrcDatos.Name = "mrcDatos";
-            this.mrcDatos.Size = new System.Drawing.Size(487, 241);
+            this.mrcDatos.Size = new System.Drawing.Size(487, 221);
             this.mrcDatos.TabIndex = 0;
             this.mrcDatos.TabStop = false;
-            this.mrcDatos.Text = "Datos del Repuesto";
+            this.mrcDatos.Text = "Datos a Ingresar";
             // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(7, 28);
+            this.lblMarca.Location = new System.Drawing.Point(7, 44);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(103, 13);
             this.lblMarca.TabIndex = 0;
@@ -75,7 +76,7 @@
             // lblOrigen
             // 
             this.lblOrigen.AutoSize = true;
-            this.lblOrigen.Location = new System.Drawing.Point(32, 76);
+            this.lblOrigen.Location = new System.Drawing.Point(32, 89);
             this.lblOrigen.Name = "lblOrigen";
             this.lblOrigen.Size = new System.Drawing.Size(38, 13);
             this.lblOrigen.TabIndex = 1;
@@ -84,7 +85,7 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(7, 143);
+            this.lblCantidad.Location = new System.Drawing.Point(7, 149);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(101, 13);
             this.lblCantidad.TabIndex = 2;
@@ -93,7 +94,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(33, 185);
+            this.lblPrecio.Location = new System.Drawing.Point(33, 189);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(37, 13);
             this.lblPrecio.TabIndex = 3;
@@ -111,7 +112,7 @@
             // lstMarcas
             // 
             this.lstMarcas.FormattingEnabled = true;
-            this.lstMarcas.Location = new System.Drawing.Point(114, 24);
+            this.lstMarcas.Location = new System.Drawing.Point(114, 40);
             this.lstMarcas.Name = "lstMarcas";
             this.lstMarcas.Size = new System.Drawing.Size(120, 17);
             this.lstMarcas.TabIndex = 5;
@@ -126,7 +127,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(114, 136);
+            this.txtCantidad.Location = new System.Drawing.Point(114, 142);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(120, 20);
             this.txtCantidad.TabIndex = 8;
@@ -141,7 +142,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(114, 63);
+            this.radioButton1.Location = new System.Drawing.Point(114, 72);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(67, 17);
             this.radioButton1.TabIndex = 10;
@@ -152,7 +153,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(114, 86);
+            this.radioButton2.Location = new System.Drawing.Point(114, 104);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(72, 17);
             this.radioButton2.TabIndex = 11;
@@ -160,11 +161,23 @@
             this.radioButton2.Text = "Importado";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // lblIngresar
+            // 
+            this.lblIngresar.AutoSize = true;
+            this.lblIngresar.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresar.Location = new System.Drawing.Point(113, 20);
+            this.lblIngresar.Name = "lblIngresar";
+            this.lblIngresar.Size = new System.Drawing.Size(357, 32);
+            this.lblIngresar.TabIndex = 1;
+            this.lblIngresar.Text = "Ingrese los Datos del Repuesto";
+            // 
             // frmGestionRepuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(583, 351);
+            this.Controls.Add(this.lblIngresar);
             this.Controls.Add(this.mrcDatos);
             this.Name = "frmGestionRepuestos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -172,6 +185,7 @@
             this.mrcDatos.ResumeLayout(false);
             this.mrcDatos.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -189,6 +203,7 @@
         private System.Windows.Forms.ListBox lstMarcas;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label lblIngresar;
     }
 }
 

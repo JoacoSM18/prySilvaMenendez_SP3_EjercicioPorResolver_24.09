@@ -16,5 +16,10 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
         {
             InitializeComponent();
         }
+
+        private void lstMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

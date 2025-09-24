@@ -26,14 +26,17 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
         {
             if(
                 string.IsNullOrEmpty(lstMarcas.Text) ||
-                btnImportado.Checked == false ||
-                btnNacional.Checked == false ||
+                btnImportado.Checked == false && btnNacional.Checked == false ||
                 txtCantidad.Value == 0 ||  
                 txtPrecio.Text == "" ||
                 string.IsNullOrWhiteSpace(txtDescripcion.Text)
                )
             {
                 MessageBox.Show("Los Datos estan Incompletos");
+            }
+            else
+            {
+                MessageBox.Show("Datos Enviados Correctamente");
             }
         }
 

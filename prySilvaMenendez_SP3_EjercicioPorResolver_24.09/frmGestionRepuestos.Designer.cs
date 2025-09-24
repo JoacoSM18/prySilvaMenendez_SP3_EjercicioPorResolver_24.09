@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionRepuestos));
             this.mrcDatos = new System.Windows.Forms.GroupBox();
+            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
+            this.lstMarcas = new System.Windows.Forms.ComboBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -40,8 +42,8 @@
             this.lblOrigen = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblIngresar = new System.Windows.Forms.Label();
-            this.lstMarcas = new System.Windows.Forms.ComboBox();
-            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.mrcDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +67,34 @@
             this.mrcDatos.TabIndex = 0;
             this.mrcDatos.TabStop = false;
             this.mrcDatos.Text = "Datos a Ingresar";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(114, 142);
+            this.txtCantidad.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.ReadOnly = true;
+            this.txtCantidad.Size = new System.Drawing.Size(67, 20);
+            this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lstMarcas
+            // 
+            this.lstMarcas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lstMarcas.FormattingEnabled = true;
+            this.lstMarcas.Items.AddRange(new object[] {
+            "P ( Peugeot )",
+            "F ( Fiat )",
+            "R ( Renault )"});
+            this.lstMarcas.Location = new System.Drawing.Point(114, 36);
+            this.lstMarcas.Name = "lstMarcas";
+            this.lstMarcas.Size = new System.Drawing.Size(132, 21);
+            this.lstMarcas.TabIndex = 0;
+            this.lstMarcas.SelectedIndexChanged += new System.EventHandler(this.lstMarcas_SelectedIndexChanged);
             // 
             // radioButton2
             // 
@@ -160,33 +190,27 @@
             this.lblIngresar.TabIndex = 1;
             this.lblIngresar.Text = "Ingrese los Datos del Repuesto";
             // 
-            // lstMarcas
+            // btnAceptar
             // 
-            this.lstMarcas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lstMarcas.FormattingEnabled = true;
-            this.lstMarcas.Items.AddRange(new object[] {
-            "P ( Peugeot )",
-            "F ( Fiat )",
-            "R ( Renault )"});
-            this.lstMarcas.Location = new System.Drawing.Point(114, 36);
-            this.lstMarcas.Name = "lstMarcas";
-            this.lstMarcas.Size = new System.Drawing.Size(132, 21);
-            this.lstMarcas.TabIndex = 0;
-            this.lstMarcas.SelectedIndexChanged += new System.EventHandler(this.lstMarcas_SelectedIndexChanged);
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Location = new System.Drawing.Point(362, 304);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(108, 35);
+            this.btnAceptar.TabIndex = 2;
+            this.btnAceptar.Text = "&ACEPTAR";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // txtCantidad
+            // btnCancelar
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(114, 142);
-            this.txtCantidad.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.ReadOnly = true;
-            this.txtCantidad.Size = new System.Drawing.Size(67, 20);
-            this.txtCantidad.TabIndex = 3;
-            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(119, 304);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(117, 35);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "&CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmGestionRepuestos
             // 
@@ -194,6 +218,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(583, 351);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblIngresar);
             this.Controls.Add(this.mrcDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -223,6 +249,8 @@
         private System.Windows.Forms.Label lblIngresar;
         private System.Windows.Forms.ComboBox lstMarcas;
         private System.Windows.Forms.NumericUpDown txtCantidad;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
 

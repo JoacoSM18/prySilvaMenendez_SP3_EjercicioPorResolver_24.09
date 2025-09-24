@@ -21,5 +21,15 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
         {
 
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

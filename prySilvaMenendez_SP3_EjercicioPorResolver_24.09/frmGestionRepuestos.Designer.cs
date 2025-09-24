@@ -32,8 +32,8 @@
             this.mrcDatos = new System.Windows.Forms.GroupBox();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.lstMarcas = new System.Windows.Forms.ComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.btnImportado = new System.Windows.Forms.RadioButton();
+            this.btnNacional = new System.Windows.Forms.RadioButton();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -52,8 +52,8 @@
             // 
             this.mrcDatos.Controls.Add(this.txtCantidad);
             this.mrcDatos.Controls.Add(this.lstMarcas);
-            this.mrcDatos.Controls.Add(this.radioButton2);
-            this.mrcDatos.Controls.Add(this.radioButton1);
+            this.mrcDatos.Controls.Add(this.btnImportado);
+            this.mrcDatos.Controls.Add(this.btnNacional);
             this.mrcDatos.Controls.Add(this.txtPrecio);
             this.mrcDatos.Controls.Add(this.txtDescripcion);
             this.mrcDatos.Controls.Add(this.lblDescripcion);
@@ -96,27 +96,27 @@
             this.lstMarcas.TabIndex = 0;
             this.lstMarcas.SelectedIndexChanged += new System.EventHandler(this.lstMarcas_SelectedIndexChanged);
             // 
-            // radioButton2
+            // btnImportado
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(114, 104);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(72, 17);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Importado";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.btnImportado.AutoSize = true;
+            this.btnImportado.Location = new System.Drawing.Point(114, 104);
+            this.btnImportado.Name = "btnImportado";
+            this.btnImportado.Size = new System.Drawing.Size(72, 17);
+            this.btnImportado.TabIndex = 2;
+            this.btnImportado.TabStop = true;
+            this.btnImportado.Text = "Importado";
+            this.btnImportado.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // btnNacional
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(114, 72);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(67, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nacional";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.btnNacional.AutoSize = true;
+            this.btnNacional.Location = new System.Drawing.Point(114, 72);
+            this.btnNacional.Name = "btnNacional";
+            this.btnNacional.Size = new System.Drawing.Size(67, 17);
+            this.btnNacional.TabIndex = 1;
+            this.btnNacional.TabStop = true;
+            this.btnNacional.Text = "Nacional";
+            this.btnNacional.UseVisualStyleBackColor = true;
             // 
             // txtPrecio
             // 
@@ -244,8 +244,8 @@
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.RichTextBox txtDescripcion;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton btnImportado;
+        private System.Windows.Forms.RadioButton btnNacional;
         private System.Windows.Forms.Label lblIngresar;
         private System.Windows.Forms.ComboBox lstMarcas;
         private System.Windows.Forms.NumericUpDown txtCantidad;

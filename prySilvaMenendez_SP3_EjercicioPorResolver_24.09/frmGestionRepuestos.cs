@@ -24,12 +24,22 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-
+            if(
+                string.IsNullOrEmpty(lstMarcas.Text) ||
+                btnImportado.Checked == false ||
+                btnNacional.Checked == false ||
+                txtCantidad.Value == 0 ||  
+                txtPrecio.Text == "" ||
+                string.IsNullOrWhiteSpace(txtDescripcion.Text)
+               )
+            {
+                MessageBox.Show("Los Datos estan Incompletos");
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

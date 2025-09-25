@@ -17,22 +17,15 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
             InitializeComponent();
         }
 
-        private void lstMarcas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if(
-                string.IsNullOrEmpty(lstMarcas.Text) ||
-                btnImportado.Checked == false && btnNacional.Checked == false ||
-                txtCantidad.Value == 0 ||  
-                txtPrecio.Text == "" ||
-                string.IsNullOrWhiteSpace(txtDescripcion.Text)
-               )
+            if (string.IsNullOrEmpty(lstMarcas.Text) ||
+                (btnImportado.Checked == false && btnNacional.Checked == false) ||
+                !int.TryParse(txtCantidad.Text, out int cantidad) || cantidad == 0 ||
+                string.IsNullOrWhiteSpace(txtPrecio.Text) ||
+                string.IsNullOrWhiteSpace(txtDescripcion.Text))
             {
-                MessageBox.Show("Los Datos estan Incompletos, Por Favor Complete Todos los Campos");
+                MessageBox.Show("Los Datos están Incompletos, Por Favor Complete Todos los Campos");
             }
             else
             {
@@ -43,11 +36,6 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void txtPrecio_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
@@ -76,20 +64,15 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
                 }
             }
         }
-
         private void txtPrecio_Leave(object sender, EventArgs e)
         {
             string texto = txtPrecio.Text.Replace('.', ',');
-
-            // Si no tiene separador decimal
             if (!texto.Contains(","))
             {
                 MessageBox.Show("Debe Ingresar el Número con Decimales");
                 txtPrecio.Focus();
                 return;
             }
-
-            // Si termina con la coma, o no tiene dos decimales después
             int indexDecimal = texto.IndexOf(',');
             if (indexDecimal == texto.Length - 1 || texto.Length - indexDecimal - 1 < 2)
             {
@@ -103,10 +86,13 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
                 txtPrecio.Focus();
             }
         }
-
-        private void frmGestionRepuestos_Load(object sender, EventArgs e)
+        private void txtCantidad_Enter(object sender, EventArgs e)
         {
-
+            txtCantidad.Select(0, 0);
+        }
+        private void txtCantidad_Click(object sender, EventArgs e)
+        {
+            txtCantidad.Select(0, 0);
         }
     }
 }

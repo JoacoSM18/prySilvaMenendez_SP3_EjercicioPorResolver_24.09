@@ -32,7 +32,6 @@
             this.mrcDatos = new System.Windows.Forms.GroupBox();
             this.lblSigno = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
-            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.lstMarcas = new System.Windows.Forms.ComboBox();
             this.btnImportado = new System.Windows.Forms.RadioButton();
             this.btnNacional = new System.Windows.Forms.RadioButton();
@@ -45,15 +44,15 @@
             this.lblIngresar = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtCantidad = new System.Windows.Forms.MaskedTextBox();
             this.mrcDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // mrcDatos
             // 
+            this.mrcDatos.Controls.Add(this.txtCantidad);
             this.mrcDatos.Controls.Add(this.lblSigno);
             this.mrcDatos.Controls.Add(this.txtPrecio);
-            this.mrcDatos.Controls.Add(this.txtCantidad);
             this.mrcDatos.Controls.Add(this.lstMarcas);
             this.mrcDatos.Controls.Add(this.btnImportado);
             this.mrcDatos.Controls.Add(this.btnNacional);
@@ -90,24 +89,8 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 28);
             this.txtPrecio.TabIndex = 6;
-            this.txtPrecio.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPrecio_MaskInputRejected);
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(214, 218);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCantidad.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.ReadOnly = true;
-            this.txtCantidad.Size = new System.Drawing.Size(100, 28);
-            this.txtCantidad.TabIndex = 3;
-            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lstMarcas
             // 
@@ -122,7 +105,6 @@
             this.lstMarcas.Name = "lstMarcas";
             this.lstMarcas.Size = new System.Drawing.Size(196, 30);
             this.lstMarcas.TabIndex = 0;
-            this.lstMarcas.SelectedIndexChanged += new System.EventHandler(this.lstMarcas_SelectedIndexChanged);
             // 
             // btnImportado
             // 
@@ -246,6 +228,18 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(214, 218);
+            this.txtCantidad.Mask = "999999";
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 28);
+            this.txtCantidad.TabIndex = 8;
+            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCantidad.ValidatingType = typeof(int);
+            this.txtCantidad.Click += new System.EventHandler(this.txtCantidad_Click);
+            this.txtCantidad.Enter += new System.EventHandler(this.txtCantidad_Enter);
+            // 
             // frmGestionRepuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -261,10 +255,8 @@
             this.Name = "frmGestionRepuestos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Repuestos";
-            this.Load += new System.EventHandler(this.frmGestionRepuestos_Load);
             this.mrcDatos.ResumeLayout(false);
             this.mrcDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,11 +275,11 @@
         private System.Windows.Forms.RadioButton btnNacional;
         private System.Windows.Forms.Label lblIngresar;
         private System.Windows.Forms.ComboBox lstMarcas;
-        private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.Label lblSigno;
+        private System.Windows.Forms.MaskedTextBox txtCantidad;
     }
 }
 

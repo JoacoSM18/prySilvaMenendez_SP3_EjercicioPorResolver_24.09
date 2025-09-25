@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionRepuestos));
             this.mrcDatos = new System.Windows.Forms.GroupBox();
+            this.lblSigno = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.lstMarcas = new System.Windows.Forms.ComboBox();
             this.btnImportado = new System.Windows.Forms.RadioButton();
@@ -43,8 +45,6 @@
             this.lblIngresar = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
-            this.lblSigno = new System.Windows.Forms.Label();
             this.mrcDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,26 @@
             this.mrcDatos.TabIndex = 0;
             this.mrcDatos.TabStop = false;
             this.mrcDatos.Text = "Datos a Ingresar";
+            // 
+            // lblSigno
+            // 
+            this.lblSigno.AutoSize = true;
+            this.lblSigno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSigno.Location = new System.Drawing.Point(187, 283);
+            this.lblSigno.Name = "lblSigno";
+            this.lblSigno.Size = new System.Drawing.Size(21, 22);
+            this.lblSigno.TabIndex = 7;
+            this.lblSigno.Text = "$";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(214, 277);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 28);
+            this.txtPrecio.TabIndex = 6;
+            this.txtPrecio.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPrecio_MaskInputRejected);
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
+            this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
             // 
             // txtCantidad
             // 
@@ -226,26 +246,6 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(214, 277);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 28);
-            this.txtPrecio.TabIndex = 6;
-            this.txtPrecio.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPrecio_MaskInputRejected);
-            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
-            this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
-            // 
-            // lblSigno
-            // 
-            this.lblSigno.AutoSize = true;
-            this.lblSigno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSigno.Location = new System.Drawing.Point(187, 283);
-            this.lblSigno.Name = "lblSigno";
-            this.lblSigno.Size = new System.Drawing.Size(21, 22);
-            this.lblSigno.TabIndex = 7;
-            this.lblSigno.Text = "$";
-            // 
             // frmGestionRepuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -261,6 +261,7 @@
             this.Name = "frmGestionRepuestos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Repuestos";
+            this.Load += new System.EventHandler(this.frmGestionRepuestos_Load);
             this.mrcDatos.ResumeLayout(false);
             this.mrcDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();

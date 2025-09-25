@@ -81,11 +81,32 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
         {
             string texto = txtPrecio.Text.Replace('.', ',');
 
+            // Si no tiene separador decimal
+            if (!texto.Contains(","))
+            {
+                MessageBox.Show("Debe Ingresar el Número con Decimales");
+                txtPrecio.Focus();
+                return;
+            }
+
+            // Si termina con la coma, o no tiene dos decimales después
+            int indexDecimal = texto.IndexOf(',');
+            if (indexDecimal == texto.Length - 1 || texto.Length - indexDecimal - 1 < 2)
+            {
+                MessageBox.Show("Debe Ingresar el Número con Dos Decimales");
+                txtPrecio.Focus();
+                return;
+            }
             if (!float.TryParse(texto, out float valor))
             {
-                MessageBox.Show("Debe Ingresar un Número Válido (Formato Decimal)");
+                MessageBox.Show("Debe Ingresar un Número Válido (Decimal)");
                 txtPrecio.Focus();
             }
+        }
+
+        private void frmGestionRepuestos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

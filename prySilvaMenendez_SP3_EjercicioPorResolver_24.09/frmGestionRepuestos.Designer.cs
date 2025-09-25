@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionRepuestos));
             this.mrcDatos = new System.Windows.Forms.GroupBox();
+            this.txtCantidad = new System.Windows.Forms.MaskedTextBox();
             this.lblSigno = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.lstMarcas = new System.Windows.Forms.ComboBox();
@@ -44,7 +45,6 @@
             this.lblIngresar = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtCantidad = new System.Windows.Forms.MaskedTextBox();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,18 @@
             this.mrcDatos.TabStop = false;
             this.mrcDatos.Text = "Datos a Ingresar";
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(256, 218);
+            this.txtCantidad.Mask = "999999";
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(72, 28);
+            this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCantidad.ValidatingType = typeof(int);
+            this.txtCantidad.Click += new System.EventHandler(this.txtCantidad_Click);
+            this.txtCantidad.Enter += new System.EventHandler(this.txtCantidad_Enter);
+            // 
             // lblSigno
             // 
             this.lblSigno.AutoSize = true;
@@ -87,8 +99,8 @@
             // 
             this.txtPrecio.Location = new System.Drawing.Point(214, 277);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 28);
-            this.txtPrecio.TabIndex = 6;
+            this.txtPrecio.Size = new System.Drawing.Size(144, 28);
+            this.txtPrecio.TabIndex = 4;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
             // 
@@ -103,7 +115,7 @@
             this.lstMarcas.Location = new System.Drawing.Point(214, 55);
             this.lstMarcas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstMarcas.Name = "lstMarcas";
-            this.lstMarcas.Size = new System.Drawing.Size(196, 30);
+            this.lstMarcas.Size = new System.Drawing.Size(144, 30);
             this.lstMarcas.TabIndex = 0;
             // 
             // btnImportado
@@ -211,7 +223,7 @@
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(162, 54);
-            this.btnAceptar.TabIndex = 2;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "&ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -223,22 +235,10 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(176, 54);
-            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "&CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(214, 218);
-            this.txtCantidad.Mask = "999999";
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 28);
-            this.txtCantidad.TabIndex = 8;
-            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCantidad.ValidatingType = typeof(int);
-            this.txtCantidad.Click += new System.EventHandler(this.txtCantidad_Click);
-            this.txtCantidad.Enter += new System.EventHandler(this.txtCantidad_Enter);
             // 
             // frmGestionRepuestos
             // 

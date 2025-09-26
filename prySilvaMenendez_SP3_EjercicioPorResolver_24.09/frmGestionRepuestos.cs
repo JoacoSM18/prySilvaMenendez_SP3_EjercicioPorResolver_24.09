@@ -12,6 +12,7 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
 {
     public partial class frmGestionRepuestos : Form
     {
+        int indice = 0;
         struct Repuesto
         {
             public char marca;
@@ -43,7 +44,15 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
                 vecRepuestos[0].precio = float.Parse(txtPrecio.Text.Replace(',', '.'));
                 vecRepuestos[0].numeroRepuesto = int.Parse(txtCantidad.Text);
                 vecRepuestos[0].descripcion = txtDescripcion.Text;
+                indice++;
                 MessageBox.Show("Datos Enviados Correctamente");
+                txtCantidad.Text = "";
+                txtPrecio.Text = "";
+                txtDescripcion.Text = "";
+                lstMarcas.SelectedIndex = -1;
+                btnImportado.Checked = false;
+                btnNacional.Checked = false;
+                lstMarcas.Focus();
             }
         }
 

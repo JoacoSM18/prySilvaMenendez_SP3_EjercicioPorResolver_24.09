@@ -12,6 +12,15 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
 {
     public partial class frmGestionRepuestos : Form
     {
+        struct Repuesto
+        {
+            public char marca;
+            public char origen;  
+            public int numeroRepuesto;
+            public float precio;
+            public string descripcion;
+        }
+        Repuesto[] vecRepuestos = new Repuesto[100];
         public frmGestionRepuestos()
         {
             InitializeComponent();
@@ -29,6 +38,11 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
             }
             else
             {
+                vecRepuestos[0].marca = lstMarcas.Text[0];
+                vecRepuestos[0].origen = btnImportado.Checked ? 'I' : 'N';
+                vecRepuestos[0].precio = float.Parse(txtPrecio.Text.Replace(',', '.'));
+                vecRepuestos[0].numeroRepuesto = int.Parse(txtCantidad.Text);
+                vecRepuestos[0].descripcion = txtDescripcion.Text;
                 MessageBox.Show("Datos Enviados Correctamente");
             }
         }
@@ -93,6 +107,11 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
         private void txtCantidad_Click(object sender, EventArgs e)
         {
             txtCantidad.Select(0, 0);
+        }
+
+        private void frmGestionRepuestos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

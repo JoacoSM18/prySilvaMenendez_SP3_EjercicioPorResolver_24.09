@@ -45,6 +45,7 @@
             this.lblIngresar = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lstDatos = new System.Windows.Forms.ListBox();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             this.mrcDatos.Controls.Add(this.lblMarca);
             this.mrcDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcDatos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.mrcDatos.Location = new System.Drawing.Point(27, 68);
+            this.mrcDatos.Location = new System.Drawing.Point(24, 53);
             this.mrcDatos.Name = "mrcDatos";
             this.mrcDatos.Size = new System.Drawing.Size(534, 222);
             this.mrcDatos.TabIndex = 0;
@@ -201,7 +202,7 @@
             this.lblIngresar.AutoSize = true;
             this.lblIngresar.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngresar.Location = new System.Drawing.Point(113, 20);
+            this.lblIngresar.Location = new System.Drawing.Point(113, 9);
             this.lblIngresar.Name = "lblIngresar";
             this.lblIngresar.Size = new System.Drawing.Size(357, 32);
             this.lblIngresar.TabIndex = 1;
@@ -210,7 +211,7 @@
             // btnEnviar
             // 
             this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviar.Location = new System.Drawing.Point(362, 304);
+            this.btnEnviar.Location = new System.Drawing.Point(376, 440);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(108, 35);
             this.btnEnviar.TabIndex = 6;
@@ -221,7 +222,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(119, 304);
+            this.btnCancelar.Location = new System.Drawing.Point(85, 440);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(117, 35);
             this.btnCancelar.TabIndex = 7;
@@ -229,12 +230,21 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lstDatos
+            // 
+            this.lstDatos.FormattingEnabled = true;
+            this.lstDatos.Location = new System.Drawing.Point(85, 315);
+            this.lstDatos.Name = "lstDatos";
+            this.lstDatos.Size = new System.Drawing.Size(399, 95);
+            this.lstDatos.TabIndex = 8;
+            // 
             // frmGestionRepuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
-            this.ClientSize = new System.Drawing.Size(583, 351);
+            this.ClientSize = new System.Drawing.Size(583, 508);
+            this.Controls.Add(this.lstDatos);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.lblIngresar);
@@ -270,6 +280,7 @@
         private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.Label lblSigno;
         private System.Windows.Forms.MaskedTextBox txtCantidad;
+        private System.Windows.Forms.ListBox lstDatos;
     }
 }
 

@@ -27,7 +27,7 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
             InitializeComponent();
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        private void btnEnviar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(lstMarcas.Text) ||
                 (btnImportado.Checked == false && btnNacional.Checked == false) ||

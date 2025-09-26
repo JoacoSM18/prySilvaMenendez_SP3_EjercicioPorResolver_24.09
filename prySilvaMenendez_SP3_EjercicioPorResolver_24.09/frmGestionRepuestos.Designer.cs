@@ -43,7 +43,7 @@
             this.lblOrigen = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblIngresar = new System.Windows.Forms.Label();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.mrcDatos.SuspendLayout();
             this.SuspendLayout();
@@ -207,16 +207,16 @@
             this.lblIngresar.TabIndex = 1;
             this.lblIngresar.Text = "Ingrese los Datos del Repuesto";
             // 
-            // btnAceptar
+            // btnEnviar
             // 
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(362, 304);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(108, 35);
-            this.btnAceptar.TabIndex = 6;
-            this.btnAceptar.Text = "&ACEPTAR";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Location = new System.Drawing.Point(362, 304);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(108, 35);
+            this.btnEnviar.TabIndex = 6;
+            this.btnEnviar.Text = "&ENVIAR";
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // btnCancelar
             // 
@@ -236,7 +236,7 @@
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(583, 351);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.lblIngresar);
             this.Controls.Add(this.mrcDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -264,7 +264,7 @@
         private System.Windows.Forms.RadioButton btnNacional;
         private System.Windows.Forms.Label lblIngresar;
         private System.Windows.Forms.ComboBox lstMarcas;
-        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.Label lblSigno;

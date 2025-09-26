@@ -39,11 +39,11 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
             }
             else
             {
-                vecRepuestos[0].marca = lstMarcas.Text[0];
-                vecRepuestos[0].origen = btnImportado.Checked ? 'I' : 'N';
-                vecRepuestos[0].precio = float.Parse(txtPrecio.Text.Replace(',', '.'));
-                vecRepuestos[0].numeroRepuesto = int.Parse(txtCantidad.Text);
-                vecRepuestos[0].descripcion = txtDescripcion.Text;
+                vecRepuestos[indice].marca = lstMarcas.Text[0];
+                vecRepuestos[indice].origen = btnImportado.Checked ? 'I' : 'N';
+                vecRepuestos[indice].precio = float.Parse(txtPrecio.Text.Replace(',', '.'));
+                vecRepuestos[indice].numeroRepuesto = int.Parse(txtCantidad.Text);
+                vecRepuestos[indice].descripcion = txtDescripcion.Text;
                 indice++;
                 MessageBox.Show("Datos Enviados Correctamente");
                 txtCantidad.Text = "";

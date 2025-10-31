@@ -44,6 +44,13 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
                 vecRepuestos[indice].precio = float.Parse(txtPrecio.Text.Replace(',', '.'));
                 vecRepuestos[indice].numeroRepuesto = int.Parse(txtCantidad.Text);
                 vecRepuestos[indice].descripcion = txtDescripcion.Text;
+                lstDatos.Items.Add(
+                    $"{vecRepuestos[indice].marca} - " +
+                    $"{vecRepuestos[indice].origen} - " +
+                    $"{vecRepuestos[indice].numeroRepuesto} - " +
+                    $"{vecRepuestos[indice].precio:F2} - " +
+                    $"{vecRepuestos[indice].descripcion}"
+                );
                 indice++;
                 MessageBox.Show("Datos Enviados Correctamente");
                 txtCantidad.Text = "";

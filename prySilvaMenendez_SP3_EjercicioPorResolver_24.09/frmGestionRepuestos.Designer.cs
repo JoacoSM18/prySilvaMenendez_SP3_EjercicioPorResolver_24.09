@@ -76,7 +76,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(256, 218);
+            this.txtCantidad.Location = new System.Drawing.Point(255, 218);
             this.txtCantidad.Mask = "999999";
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(72, 30);
@@ -98,7 +98,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(214, 277);
+            this.txtPrecio.Location = new System.Drawing.Point(214, 275);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(144, 30);
             this.txtPrecio.TabIndex = 4;
@@ -168,7 +168,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(86, 283);
+            this.lblPrecio.Location = new System.Drawing.Point(86, 285);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(67, 25);
@@ -178,7 +178,7 @@
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(26, 225);
+            this.lblNumero.Location = new System.Drawing.Point(9, 221);
             this.lblNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(200, 25);
@@ -188,7 +188,7 @@
             // lblOrigen
             // 
             this.lblOrigen.AutoSize = true;
-            this.lblOrigen.Location = new System.Drawing.Point(86, 138);
+            this.lblOrigen.Location = new System.Drawing.Point(86, 144);
             this.lblOrigen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOrigen.Name = "lblOrigen";
             this.lblOrigen.Size = new System.Drawing.Size(71, 25);
@@ -198,7 +198,7 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(87, 63);
+            this.lblMarca.Location = new System.Drawing.Point(86, 63);
             this.lblMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(67, 25);

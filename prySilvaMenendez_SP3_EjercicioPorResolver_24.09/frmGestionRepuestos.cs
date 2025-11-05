@@ -35,7 +35,7 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
                 string.IsNullOrWhiteSpace(txtPrecio.Text) ||
                 string.IsNullOrWhiteSpace(txtDescripcion.Text))
             {
-                MessageBox.Show("Los Datos están Incompletos, Por Favor Complete Todos los Campos","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Datos Incompletos, Por Favor Complete Todos los Campos","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

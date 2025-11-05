@@ -35,7 +35,7 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
                 string.IsNullOrWhiteSpace(txtPrecio.Text) ||
                 string.IsNullOrWhiteSpace(txtDescripcion.Text))
             {
-                MessageBox.Show("Los Datos están Incompletos, Por Favor Complete Todos los Campos");
+                MessageBox.Show("Los Datos están Incompletos, Por Favor Complete Todos los Campos","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -52,7 +52,8 @@ namespace prySilvaMenendez_SP3_EjercicioPorResolver_24._09
                     $"{vecRepuestos[indice].descripcion}"
                 );
                 indice++;
-                MessageBox.Show("Datos Enviados Correctamente");
+                MessageBox.Show("Datos Enviados Correctamente","Éxito",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lstDatos.Visible = true;
                 txtCantidad.Text = "";
                 txtPrecio.Text = "";
                 txtDescripcion.Text = "";
